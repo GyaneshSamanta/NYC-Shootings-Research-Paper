@@ -5,7 +5,7 @@
 <br>
 <p align="center">
 <b>Team ByteBridgers presents <a href="https://bullets-over-broadway.vercel.app/
-">Bullets Over Broadway</a>
+">NYC-Shootings-Research-Paper</a>
 <br>
 </p>
 <blockquote align="center"> 
@@ -20,12 +20,15 @@ Analyze a public dataset to gain insights into a social, environmental, or econo
 # 🧠 Knowledge Primer
 
 ### Dataset
+
 The analysis is based on the NYPD Shooting Incident Data (Historic) dataset. The data is loaded into a Pandas DataFrame, revealing insights into various aspects of shooting incidents.
 
 ### Exploratory Data Analysis (EDA)
+
 The EDA includes the use of Python libraries such as Pandas, Matplotlib, Seaborn and Folium for visualization and geospatial analysis.
 
 ### Key Visualizations
+
 1. **Shootings by Borough:**
    - Bar chart illustrating the number of shootings in each borough.
 
@@ -54,6 +57,7 @@ The EDA includes the use of Python libraries such as Pandas, Matplotlib, Seaborn
    - Various charts analyzing shootings by time of day, day of the week and top precincts.
 
 ### Clustering Analysis
+
 The knowledge primer concludes with a clustering analysis using K-Means clustering. The analysis explores patterns based on precinct, location, time of day and day of the week.
 
 # 📺 Preview
@@ -73,7 +77,6 @@ The knowledge primer concludes with a clustering analysis using K-Means clusteri
 <div align="center">
   <img alt="Preview Images" src="docs/preview5.png" />
 </div>
-
 
 # 💻 Tech Stack / Libraries
 
@@ -123,4 +126,5 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 # Conclusion
+
 The provided Python code and visualizations offer a comprehensive understanding of the NYPD shooting incident data, providing valuable insights for addressing our problem statement for the Youth Data Hack event.
