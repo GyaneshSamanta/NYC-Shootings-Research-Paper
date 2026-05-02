@@ -1,130 +1,105 @@
 <div align="center">
-  <img alt="HackRx3.0" src="docs/ydh.png" height="65" />
+  <img src="docs/ydh.png" height="80" />
+
+# Bullets Over Broadway
+
+**A data-driven research paper on NYC shootings — built for Youth Data Hack by Team ByteBridgers.**
+
+[![Hackathon](https://img.shields.io/badge/Built%20at-Youth%20Data%20Hack-purple.svg)](https://youth-data-hack.devpost.com/)
+[![Live Site](https://img.shields.io/badge/Live-bullets--over--broadway.vercel.app-black.svg)](https://bullets-over-broadway.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+<img src="docs/preview1.png" width="85%" />
+
 </div>
 
-<br>
-<p align="center">
-<b>Team ByteBridgers presents <a href="https://bullets-over-broadway.vercel.app/
-">NYC-Shootings-Research-Paper</a>
-<br>
-</p>
-<blockquote align="center"> 
-  built on <span style="color: #8b0000;">☕</span> for <a href="https://youth-data-hack.devpost.com/">Youth Data Hack</a>.
+---
 
-</blockquote>
+## About
 
-# 💡 Problem Statement
+|        |                                                                                                  |
+| ------ | ------------------------------------------------------------------------------------------------ |
+| Who    | Team **ByteBridgers** — [Gyanesh Samanta](https://github.com/GyaneshSamanta) and [Priyadarsh S S](https://github.com/priyadarshss). |
+| What   | A research paper + interactive Next.js site analyzing NYPD historic shooting incident data.       |
+| When   | October 2023 — submitted to **Youth Data Hack**.                                                  |
+| Where  | Hosted at [bullets-over-broadway.vercel.app](https://bullets-over-broadway.vercel.app/).          |
+| Why    | Public datasets contain stories that policy debates ignore. We wanted ours to be unignorable.     |
 
-Analyze a public dataset to gain insights into a social, environmental, or economic issue and develop a data driven solution.
+## The Story
 
-# 🧠 Knowledge Primer
+The prompt was open-ended: "Analyze a public dataset to gain insight into a social issue." We picked the **NYPD Shooting Incident Data (Historic)** because it's enormous, granular, and politically loaded. Every row is a shooting. Every column is a question — borough, precinct, time of day, perpetrator demographics, victim demographics, whether the incident ended in murder.
 
-### Dataset
+We started in a Jupyter notebook. Pandas to clean it, Matplotlib and Seaborn for distributions, Folium for a heatmap that made geography feel like fate. The patterns showed up fast: shootings concentrate in specific precincts, evening hours dominate, and the cross-tabulation of perpetrator vs. victim demographics tells a story the headlines flatten.
 
-The analysis is based on the NYPD Shooting Incident Data (Historic) dataset. The data is loaded into a Pandas DataFrame, revealing insights into various aspects of shooting incidents.
+Then we layered analysis: K-Means clustering to find recurring "incident types" by precinct + time + day-of-week, and a separate notebook (`Analysis_Disparities_Suspect_Identification.ipynb`) probing disparities in suspect identification across groups.
 
-### Exploratory Data Analysis (EDA)
+The Next.js site at [bullets-over-broadway.vercel.app](https://bullets-over-broadway.vercel.app/) is the research paper made interactive — Leaflet maps for the geospatial layer, scrollable charts, and the conclusion served as a story rather than a PDF.
 
-The EDA includes the use of Python libraries such as Pandas, Matplotlib, Seaborn and Folium for visualization and geospatial analysis.
-
-### Key Visualizations
-
-1. **Shootings by Borough:**
-   - Bar chart illustrating the number of shootings in each borough.
-
-2. **Shootings Over Time:**
-   - Line chart depicting the trend of shootings over time on a monthly basis.
-
-3. **Perpetrator Age Group Distribution:**
-   - Bar chart showing the distribution of shootings based on perpetrator age groups.
-
-4. **Perpetrator Gender and Race Distribution:**
-   - Stacked bar charts illustrating the distribution of shootings based on perpetrator gender and race.
-
-5. **Victim Age, Gender and Race Distributions:**
-   - Stacked bar charts showing the distribution of shootings based on victim age, gender and race.
-
-6. **Shootings Resulting in Murder:**
-   - Pie chart indicating the proportion of shootings resulting in murder.
-
-7. **Geospatial Analysis:**
-   - Folium map with a heatmap indicating the locations of shooting incidents.
-
-8. **Cross-tabulations:**
-   - Tables showing relationships between variables such as perpetrator race vs. victim race, perpetrator age group vs. victim age group and perpetrator gender vs. victim gender.
-
-9. **Additional Analysis:**
-   - Various charts analyzing shootings by time of day, day of the week and top precincts.
-
-### Clustering Analysis
-
-The knowledge primer concludes with a clustering analysis using K-Means clustering. The analysis explores patterns based on precinct, location, time of day and day of the week.
-
-# 📺 Preview
+## Gallery
 
 <div align="center">
-  <img alt="Preview Images" src="docs/preview1.png" />
-</div>
-<div align="center">
-  <img alt="Preview Images" src="docs/preview2.png" />
-</div>
-<div align="center">
-  <img alt="Preview Images" src="docs/preview4.png" />
-</div>
-<div align="center">
-  <img alt="Preview Images" src="docs/preview3.png" />
-</div>
-<div align="center">
-  <img alt="Preview Images" src="docs/preview5.png" />
+  <img src="docs/preview2.png" width="80%" />
+  <img src="docs/preview3.png" width="80%" />
+  <img src="docs/preview4.png" width="80%" />
+  <img src="docs/preview5.png" width="80%" />
 </div>
 
-# 💻 Tech Stack / Libraries
+---
 
-- Next.js
-- JavaScript
-- Leaflet
-- Jupyter Notebook
-- Pandas
-- Matplotlib
-- Seaborn
-- Folium
-- Scikit-learn (sklearn)
-- NumPy
+## Tech Stack
 
-# 📜 License
+**Analysis:** Python · Pandas · NumPy · Matplotlib · Seaborn · Folium · scikit-learn (K-Means)
+**Web:** Next.js 13 · React · Chakra UI · Framer Motion · Leaflet / react-leaflet
+**Data:** NYPD Shooting Incident Data (Historic) + NYC Police Precincts GeoJSON
 
-`Bullets Over Broadway` is available under the MIT license. See the [`LICENSE`](https://github.com/HackRx3/PS1_NudgeFudge/blob/main/LICENSE) file for more info.
+## Repo Structure
 
-# 💥 Contributors
-
-<a href="https://github.com/GyaneshSamanta/Youth-Data-Hack/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=GyaneshSamanta/Youth-Data-Hack" alt="Contributors">
-</a>
-<img src="https://contrib.rocks/image?repo=priyadarshss/bullets-over-broadway" alt="Contributors">
-</a>
-                                                                                  
-# 🚨 Forking this repo
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+```
+Youth-Data-Hack/
+├── Dataset/                                       # Raw NYPD CSV
+├── JupyterNotebook/
+│   ├── notebook.ipynb                             # Main EDA + clustering
+│   ├── Analysis_Disparities_Suspect_Identification.ipynb
+│   └── nyc-police-precincts.geojson
+├── src/app/                                       # Next.js (App Router) site
+├── public/images/                                 # Generated charts + map exports
+└── docs/                                          # README assets
+```
 
 ## Getting Started
 
-First, run the development server:
+**Run the notebooks:**
 
 ```bash
-yarn dev
-# or
-npm run dev
-# or
-pnpm dev
+pip install pandas numpy matplotlib seaborn folium scikit-learn jupyter
+jupyter notebook JupyterNotebook/notebook.ipynb
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Run the site:**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/GyaneshSamanta/Youth-Data-Hack.git
+cd Youth-Data-Hack
+yarn install   # or npm install
+yarn dev       # http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing
 
-# Conclusion
+Open an issue first if you're proposing a methodology change — we want the analysis to stay defensible. UI/UX PRs welcome any time.
 
-The provided Python code and visualizations offer a comprehensive understanding of the NYPD shooting incident data, providing valuable insights for addressing our problem statement for the Youth Data Hack event.
+## License
+
+[MIT](LICENSE).
+
+## Credits
+
+- **Team ByteBridgers:** [Gyanesh Samanta](https://github.com/GyaneshSamanta), [Priyadarsh S S](https://github.com/priyadarshss).
+- **Data:** NYC Open Data — NYPD Shooting Incident Data (Historic).
+- **Event:** [Youth Data Hack](https://youth-data-hack.devpost.com/).
+
+<div align="center">
+  <a href="https://github.com/GyaneshSamanta/Youth-Data-Hack/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=GyaneshSamanta/Youth-Data-Hack" />
+  </a>
+</div>
